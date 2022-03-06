@@ -9,8 +9,5 @@
  * @param {number[][]} grid
  * @return {number}
  */
-var maxAreaOfIsland = function(grid) {
-
-};
+var maxAreaOfIsland = function (grid) {};
 // @lc code=end
-

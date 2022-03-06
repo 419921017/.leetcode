@@ -78,4 +78,25 @@ var intersect2 = function (nums1, nums2) {
 };
 console.log(intersect2([1, 2, 2, 1], [2, 2]));
 
+var intersect3 = (nums1, nums2) => {
+  nums1 = nums1.sort((a, b) => a - b);
+  nums2 = nums2.sort((a, b) => a - b);
+  const res = [];
+  let left = 0,
+    right = 0;
+  while (left < nums1.length && right < nums2.length) {
+    if (nums1[left] == nums2[right]) {
+      res.push(nums1[left]);
+      left++;
+      right++;
+    } else if (nums1[left] > nums2[right]) {
+      right++;
+    } else if (nums1[left] < nums2[right]) {
+      left++;
+    }
+  }
+  return res;
+};
+
+console.log(intersect3([1, 2, 2, 1], [2, 2]));
 // @lc code=end
